@@ -5,14 +5,18 @@
 
 /* Light Mode */
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #f4f6f8;
   --text-color: #000000;
+  --card-color: white;
+  --light-text-color: gray;
 }
 
 /* Dark Mode */
 :root.dark-mode {
-  --bg-color: #212121;
+  --bg-color: #121721;
   --text-color: #ffffff;
+  --card-color: #19202d;
+  --light-text-color: rgb(187, 187, 187);
 }
 
 /* :root {
