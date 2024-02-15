@@ -1,0 +1,13 @@
+.main {
+  width: 100%;
+  padding-bottom: 200px;
+}
+
+.jobs-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: center; /* Center vertically */
+  align-content: stretch; /* Stretch items to fill container */
+}

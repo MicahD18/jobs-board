@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Detail from "./pages/Detail";
+import NotFound from "./pages/NotFound";
 
 const Layout = () => {
   return (
@@ -19,6 +21,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/details/:index",
+        element: <Detail />,
+      },
+      {
+        element: <NotFound />,
       },
     ],
   },
