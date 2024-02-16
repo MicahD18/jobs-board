@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import "../styles/JobCard.css";
 import { Link } from "react-router-dom";
 
@@ -17,17 +17,59 @@ const JobCard: React.FC<Props> = (props) => {
         color: "var(--text-color)",
       }}
     >
-      <Card.Body>
-        <Card.Text style={{ color: "var(--light-text-color)" }}>
-          {props.job.postedAt}
-        </Card.Text>
-        <Card.Title style={{ color: "var(--text-color)" }}>
-          <Link to={`/details/${props.index}`} className="link">
+      <Card.Body style={{ lineHeight: "35px" }}>
+        <Container className="details">
+          <Card.Text
+            style={{
+              color: "var(--light-text-color)",
+              fontFamily: "Kumbh Sans",
+            }}
+          >
+            {props.job.postedAt}
+          </Card.Text>
+          <div
+            style={{
+              width: "5px",
+              height: "5px",
+              backgroundColor: "var(--light-text-color)",
+              borderRadius: "25px",
+            }}
+          ></div>
+          <Card.Text
+            style={{
+              color: "var(--light-text-color)",
+              fontFamily: "Kumbh Sans",
+            }}
+          >
+            {props.job.contract}
+          </Card.Text>
+        </Container>
+        <Card.Title
+          style={{
+            color: "var(--text-color)",
+            fontFamily: "Kumbh Sans",
+            fontWeight: "bold",
+          }}
+        >
+          <Link to={`/details/${props.job.company}`} className="link">
             {props.job.position}
           </Link>
         </Card.Title>
-        <Card.Text style={{ color: "var(--light-text-color)" }}>
+        <Card.Text
+          style={{ color: "var(--light-text-color)", fontFamily: "Kumbh Sans" }}
+        >
           {props.job.company}
+        </Card.Text>
+        <Card.Text
+          style={{
+            color: "var(--light-text-color)",
+            fontFamily: "Kumbh Sans",
+            marginTop: "25px",
+            fontSize: "14px",
+            fontWeight: "bold",
+          }}
+        >
+          {props.job.location}
         </Card.Text>
       </Card.Body>
     </Card>
