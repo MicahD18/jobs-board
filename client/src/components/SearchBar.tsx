@@ -35,6 +35,7 @@ const SearchBar: React.FC<SearchProps> = ({ searchInput, setSearchInput }) => {
             style={{
               backgroundColor: "var(--card-color)",
               color: "var(--light-text-color)",
+              fontFamily: "Kumbh Sans",
             }}
             value={searchInput}
             onChange={handleSearchChange}

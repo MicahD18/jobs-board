@@ -1,11 +1,10 @@
-import { Card, Container } from "react-bootstrap";
+import { Card, Container, Image } from "react-bootstrap";
 import "../styles/JobCard.css";
 import { Link } from "react-router-dom";
+import { Job } from "../models/job.model";
 
 interface Props {
-  index: number;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  job: any;
+  job: Job;
 }
 
 const JobCard: React.FC<Props> = (props) => {
@@ -17,6 +16,7 @@ const JobCard: React.FC<Props> = (props) => {
         color: "var(--text-color)",
       }}
     >
+      <Image src={props.job.logo} style={{ marginTop: "-36px" }} />
       <Card.Body style={{ lineHeight: "35px" }}>
         <Container className="details">
           <Card.Text
@@ -62,7 +62,7 @@ const JobCard: React.FC<Props> = (props) => {
         </Card.Text>
         <Card.Text
           style={{
-            color: "var(--light-text-color)",
+            color: "#5964e0",
             fontFamily: "Kumbh Sans",
             marginTop: "25px",
             fontSize: "14px",
