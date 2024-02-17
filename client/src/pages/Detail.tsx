@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import jobs from "../data.json";
 import { useCallback, useEffect, useState } from "react";
 import { Job } from "../models/job.model";
+import CompanyCard from "../components/CompanyCard";
+
+import "../styles/Detail.css";
 
 const Detail: React.FC = () => {
   const params = useParams();
@@ -24,9 +27,18 @@ const Detail: React.FC = () => {
 
   return (
     <div
-      style={{ backgroundColor: "var(--bg-color)", color: "var(--text-color)" }}
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "var(--bg-color)",
+        color: "var(--text-color)",
+      }}
     >
-      <p>{job?.company}</p>
+      <div className="company-container">
+        <CompanyCard company={job?.company} logo={job?.logo} />
+      </div>
     </div>
   );
 };

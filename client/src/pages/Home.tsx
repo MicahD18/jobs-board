@@ -33,15 +33,17 @@ const Home = () => {
 
   return (
     <div
+      className="home-container"
       style={{ backgroundColor: "var(--bg-color)", color: "var(--text-color)" }}
     >
-      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
-      <div className="main">
-        <div className="jobs-container">
-          {filteredItems.map((job, index) => (
-            <JobCard key={job.id} job={job} index={index} />
-          ))}
-        </div>
+      <div className="searchbar-container">
+        <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
+      </div>
+
+      <div className="jobs-container">
+        {filteredItems.map((job) => (
+          <JobCard key={job.id} job={job} />
+        ))}
       </div>
     </div>
   );

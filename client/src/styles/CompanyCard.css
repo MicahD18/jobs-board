@@ -1,0 +1,22 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 15px;
+}
+
+#company-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 95%;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  #company-card {
+    width: 90%;
+  }
+}
