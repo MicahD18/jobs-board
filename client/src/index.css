@@ -9,6 +9,8 @@
   --text-color: #000000;
   --card-color: white;
   --light-text-color: gray;
+  --light-button-bg: #eff0fc;
+  --light-button-text: #5964e0;
 }
 
 /* Dark Mode */
@@ -17,11 +19,23 @@
   --text-color: #ffffff;
   --card-color: #19202d;
   --light-text-color: rgb(187, 187, 187);
+  --light-button-bg: #303642;
+  --light-button-text: #fff;
 }
 
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+.light-button {
+  background-color: var(--light-button-bg);
+  color: var(--light-button-text);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Kumbh Sans";
+  font-weight: bold;
 }
 
 /* :root {

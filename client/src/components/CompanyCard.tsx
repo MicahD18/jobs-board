@@ -20,11 +20,15 @@ const CompanyCard: React.FC<CardProps> = (props) => {
         >
           <Image className="image" src={props.logo} />
           <div>
-            <p>{props.company}</p>
-            <p>{props.company}.com</p>
+            <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+              {props.company}
+            </p>
+            <p style={{ fontSize: "12px", color: "var(--light-text-color)" }}>
+              {props.company}.com
+            </p>
           </div>
         </div>
-        <button>Company Site</button>
+        <button className="light-button">Company Site</button>
       </div>
     </div>
   );
