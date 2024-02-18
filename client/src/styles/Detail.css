@@ -2,6 +2,16 @@
   width: 60%;
   background-color: var(--card-color);
   margin-top: -25px;
-  border-radius: 17px;
+  border-radius: 5px;
   font-family: "Kumbh Sans";
+}
+
+.detail-container {
+  width: 60%;
+  background-color: var(--card-color);
+  margin-top: -25px;
+  border-radius: 5px;
+  font-family: "Kumbh Sans";
+  margin-top: 25px;
+  margin-bottom: 25px;
 }

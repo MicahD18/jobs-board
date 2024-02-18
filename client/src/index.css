@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+body {
+  background-color: var(--bg-color);
+}
+
 /* Light Mode */
 :root {
   --bg-color: #f4f6f8;
@@ -11,6 +15,7 @@
   --light-text-color: gray;
   --light-button-bg: #eff0fc;
   --light-button-text: #5964e0;
+  --dark-button-bg: #5964e0;
 }
 
 /* Dark Mode */
@@ -21,6 +26,7 @@
   --light-text-color: rgb(187, 187, 187);
   --light-button-bg: #303642;
   --light-button-text: #fff;
+  --dark-button-bg: #5964e0;
 }
 
 .link {
@@ -32,10 +38,22 @@
   background-color: var(--light-button-bg);
   color: var(--light-button-text);
   border: none;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   font-family: "Kumbh Sans";
   font-weight: bold;
+  width: 125px;
+}
+
+.dark-button {
+  background-color: var(--dark-button-bg);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "Kumbh Sans";
+  font-weight: bold;
+  width: 125px;
 }
 
 /* :root {

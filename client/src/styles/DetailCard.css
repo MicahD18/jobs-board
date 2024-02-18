@@ -1,0 +1,24 @@
+.detail-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+
+#info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#job-info-container {
+  line-height: 35px;
+}
+
+.detail-text {
+  color: var(--light-text-color);
+  line-height: 25px;
+}

@@ -1,10 +1,10 @@
-import { Card, Container, Image } from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
 import "../styles/JobCard.css";
-import { Link } from "react-router-dom";
 import { Job } from "../models/job.model";
+import JobInfo from "../components/JobInfo";
 
 interface Props {
-  job: Job;
+  job: Job | null;
 }
 
 const JobCard: React.FC<Props> = (props) => {
@@ -16,50 +16,15 @@ const JobCard: React.FC<Props> = (props) => {
         color: "var(--text-color)",
       }}
     >
-      <Image src={props.job.logo} style={{ marginTop: "-36px" }} />
+      <Image src={props.job?.logo} style={{ marginTop: "-36px" }} />
       <Card.Body style={{ lineHeight: "35px" }}>
-        <Container className="details">
-          <Card.Text
-            style={{
-              color: "var(--light-text-color)",
-              fontFamily: "Kumbh Sans",
-            }}
-          >
-            {props.job.postedAt}
-          </Card.Text>
-          <div
-            style={{
-              width: "5px",
-              height: "5px",
-              backgroundColor: "var(--light-text-color)",
-              borderRadius: "25px",
-            }}
-          ></div>
-          <Card.Text
-            style={{
-              color: "var(--light-text-color)",
-              fontFamily: "Kumbh Sans",
-            }}
-          >
-            {props.job.contract}
-          </Card.Text>
-        </Container>
-        <Card.Title
-          style={{
-            color: "var(--text-color)",
-            fontFamily: "Kumbh Sans",
-            fontWeight: "bold",
-          }}
-        >
-          <Link to={`/details/${props.job.company}`} className="link">
-            {props.job.position}
-          </Link>
-        </Card.Title>
-        <Card.Text
-          style={{ color: "var(--light-text-color)", fontFamily: "Kumbh Sans" }}
-        >
-          {props.job.company}
-        </Card.Text>
+        <JobInfo
+          postedAt={props.job?.postedAt}
+          contract={props.job?.contract}
+          company={props.job?.company}
+          position={props.job?.position}
+          location={undefined}
+        />
         <Card.Text
           style={{
             color: "#5964e0",
@@ -69,7 +34,7 @@ const JobCard: React.FC<Props> = (props) => {
             fontWeight: "bold",
           }}
         >
-          {props.job.location}
+          {props.job?.location}
         </Card.Text>
       </Card.Body>
     </Card>

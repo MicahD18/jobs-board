@@ -5,6 +5,7 @@ import { Job } from "../models/job.model";
 import CompanyCard from "../components/CompanyCard";
 
 import "../styles/Detail.css";
+import DetailCard from "../components/DetailCard";
 
 const Detail: React.FC = () => {
   const params = useParams();
@@ -38,6 +39,9 @@ const Detail: React.FC = () => {
     >
       <div className="company-container">
         <CompanyCard company={job?.company} logo={job?.logo} />
+      </div>
+      <div className="detail-container">
+        <DetailCard job={job} />
       </div>
     </div>
   );
