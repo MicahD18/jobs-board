@@ -12,7 +12,6 @@
 .search {
   display: flex;
   flex-direction: row;
-  width: 275px;
 }
 
 input {

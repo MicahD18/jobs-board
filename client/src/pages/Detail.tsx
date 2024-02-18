@@ -6,6 +6,7 @@ import CompanyCard from "../components/CompanyCard";
 
 import "../styles/Detail.css";
 import DetailCard from "../components/DetailCard";
+import DetailFooter from "../components/DetailFooter";
 
 const Detail: React.FC = () => {
   const params = useParams();
@@ -43,6 +44,7 @@ const Detail: React.FC = () => {
       <div className="detail-container">
         <DetailCard job={job} />
       </div>
+      <DetailFooter job={job} />
     </div>
   );
 };

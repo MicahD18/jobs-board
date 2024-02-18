@@ -37,6 +37,17 @@ const DetailCard: React.FC<DetailProps> = ({ job }) => {
             </li>
           ))}
         </ul>
+        <h3 style={{ marginTop: "25px" }}>What You Will Do</h3>
+        <p className="detail-text" style={{ marginTop: "25px" }}>
+          {job?.role.content}
+        </p>
+        <ol style={{ padding: "25px" }}>
+          {job?.role.items.map((item) => (
+            <li key={item} className="detail-text">
+              {item}
+            </li>
+          ))}
+        </ol>
       </div>
     </div>
   );
