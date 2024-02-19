@@ -21,3 +21,8 @@ input {
   margin-left: 15px;
   width: 100%;
 }
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}

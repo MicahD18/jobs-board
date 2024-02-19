@@ -5,18 +5,32 @@ import jobs from "../data.json";
 import "../styles/Home.css";
 
 const Home = () => {
-  const [jobsData, setJobsData] = useState(jobs);
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState<string>("");
+  const [selectedLocation, setSelectedLocation] = useState<string>("All");
+  const [fullTimeOnly, setFullTimeOnly] = useState<boolean>(false);
 
-  const filterItems = (input: string) => {
-    return jobsData.filter((item) => {
-      return Object.values(item).some((val) =>
+  const filterItems = (input: string, location: string, fullTime: boolean) => {
+    return jobs.filter((item) => {
+      // if any object matches the input, return those objects that match
+      const matchesSearch = Object.values(item).some((val) =>
         val.toString().toLowerCase().includes(input.toLowerCase())
       );
+      // if location is "All", return all jobs postings that match ONLY the search input
+      // Else return the job postings that match the location AND the search input
+      const matchesLocation =
+        location === "All" ? jobs : item.location === location;
+      // same logic applies to full time only filter
+      const isFullTimeOnly = fullTime ? item.contract === "Full Time" : jobs;
+
+      return matchesSearch && matchesLocation && isFullTimeOnly;
     });
   };
 
-  const filteredItems = filterItems(searchInput);
+  const filteredItems = filterItems(
+    searchInput,
+    selectedLocation,
+    fullTimeOnly
+  );
 
   useEffect(() => {
     // Load saved search input from local storage
@@ -37,7 +51,14 @@ const Home = () => {
       style={{ backgroundColor: "var(--bg-color)", color: "var(--text-color)" }}
     >
       <div className="searchbar-container">
-        <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
+        <SearchBar
+          searchInput={searchInput}
+          setSearchInput={setSearchInput}
+          selectedLocation={selectedLocation}
+          setSelectedLocation={setSelectedLocation}
+          fullTimeOnly={fullTimeOnly}
+          setFullTimeOnly={setFullTimeOnly}
+        />
       </div>
 
       <div className="jobs-container">
