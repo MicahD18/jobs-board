@@ -10,6 +10,14 @@
   height: 25px;
 }
 
+/* GALAXY FOLD */
+@media screen and (max-width: 280px) {
+  .search-container {
+    width: 60%;
+    margin-left: 13%;
+  }
+}
+
 .search {
   display: flex;
   flex-direction: row;
@@ -23,22 +31,10 @@
   width: 100%;
 }
 
-.checkbox {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  background-color: var(--card-color);
-}
-
 .form-select {
   cursor: pointer;
   background-color: var(--card-color);
   color: var(--text-color);
-}
-
-.checkbox .form-check-input[type="checkbox"]:checked {
-  background-color: red;
-  border-color: blue;
 }
 
 #filter-container {
