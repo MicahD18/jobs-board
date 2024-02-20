@@ -7,6 +7,12 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 791px) {
+  .header-container {
+    background-color: red;
+  }
+}
+
 .navbar-container {
   width: 75%;
 }
@@ -47,7 +53,11 @@
   position: absolute;
   top: 5px;
   left: 5px;
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.toggle-circle:hover {
+  background-color: var(--dark-button-hover);
 }
 
 .toggle-button.active .toggle-circle {

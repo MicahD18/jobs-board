@@ -1,4 +1,5 @@
 import { Job } from "../models/job.model";
+import "../styles/DetailFooter.css";
 
 interface DetailProps {
   job: Job | null;
@@ -18,16 +19,7 @@ const DetailFooter: React.FC<DetailProps> = ({ job }) => {
         justifyContent: "center",
       }}
     >
-      <div
-        style={{
-          width: "60%",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          fontFamily: "Kumbh Sans",
-        }}
-      >
+      <div id="detail-footer">
         <div>
           <p style={{ fontWeight: "bold" }}>{job?.position}</p>
           <p style={{ color: "var(--light-text-color)", marginTop: "5px" }}>

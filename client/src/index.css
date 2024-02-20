@@ -15,7 +15,9 @@ body {
   --light-text-color: gray;
   --light-button-bg: #eff0fc;
   --light-button-text: #5964e0;
+  --light-button-hover: #c4c8f4;
   --dark-button-bg: #5964e0;
+  --dark-button-hover: #939bf4;
 }
 
 /* Dark Mode */
@@ -26,7 +28,9 @@ body {
   --light-text-color: rgb(187, 187, 187);
   --light-button-bg: #303642;
   --light-button-text: #fff;
+  --light-button-hover: #535862;
   --dark-button-bg: #5964e0;
+  --dark-button-hover: #939bf4;
 }
 
 .link {
@@ -43,6 +47,12 @@ body {
   font-family: "Kumbh Sans";
   font-weight: bold;
   width: 125px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.light-button:hover {
+  background-color: var(--light-button-hover);
 }
 
 .dark-button {
@@ -54,6 +64,12 @@ body {
   font-family: "Kumbh Sans";
   font-weight: bold;
   width: 125px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.dark-button:hover {
+  background-color: var(--dark-button-hover);
 }
 
 /* :root {

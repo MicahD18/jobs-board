@@ -1,11 +1,12 @@
 .search-container {
-  width: 100%;
+  width: 90%;
   margin-top: -40px;
   background-color: white;
   padding: 25px 20px 25px 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   height: 25px;
 }
 
@@ -18,11 +19,25 @@ input {
   border: none;
   outline: none;
   box-shadow: none;
-  margin-left: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
   width: 100%;
 }
 
 .checkbox {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
+  background-color: var(--card-color);
+}
+
+.form-select {
+  cursor: pointer;
+  background-color: var(--card-color);
+  color: var(--text-color);
+}
+
+.checkbox .form-check-input[type="checkbox"]:checked {
+  background-color: red;
+  border-color: blue;
 }

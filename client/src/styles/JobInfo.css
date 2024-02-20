@@ -6,3 +6,7 @@
   justify-content: space-between;
   font-size: 16px;
 }
+
+.link:hover {
+  color: #6e8098;
+}

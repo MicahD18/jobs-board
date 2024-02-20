@@ -1,0 +1,14 @@
+#detail-footer {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Kumbh Sans";
+}
+
+@media screen and (max-width: 791px) {
+  #detail-footer {
+    width: 90%;
+  }
+}

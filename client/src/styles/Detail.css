@@ -15,3 +15,13 @@
   margin-top: 25px;
   margin-bottom: 125px;
 }
+
+@media screen and (max-width: 791px) {
+  .company-container {
+    width: 90%;
+  }
+
+  .detail-container {
+    width: 90%;
+  }
+}
