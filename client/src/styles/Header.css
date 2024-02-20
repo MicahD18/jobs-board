@@ -7,12 +7,6 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 791px) {
-  .header-container {
-    background-color: red;
-  }
-}
-
 .navbar-container {
   width: 75%;
 }

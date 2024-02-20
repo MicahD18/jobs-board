@@ -18,6 +18,7 @@ body {
   --light-button-hover: #c4c8f4;
   --dark-button-bg: #5964e0;
   --dark-button-hover: #939bf4;
+  --filter-icon: #6e8098;
 }
 
 /* Dark Mode */
@@ -31,6 +32,7 @@ body {
   --light-button-hover: #535862;
   --dark-button-bg: #5964e0;
   --dark-button-hover: #939bf4;
+  --filter-icon: white;
 }
 
 .link {
@@ -70,6 +72,28 @@ body {
 
 .dark-button:hover {
   background-color: var(--dark-button-hover);
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  padding: 20px;
+  animation: fadeInOut 0.3s alternate;
+}
+
+/* Animation keyframes */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 /* :root {

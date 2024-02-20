@@ -15,12 +15,11 @@
   flex-direction: row;
 }
 
-input {
+.search input {
   border: none;
   outline: none;
   box-shadow: none;
   margin-left: 10px;
-  margin-right: 10px;
   width: 100%;
 }
 
@@ -40,4 +39,16 @@ input {
 .checkbox .form-check-input[type="checkbox"]:checked {
   background-color: red;
   border-color: blue;
+}
+
+#filter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#filter-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
