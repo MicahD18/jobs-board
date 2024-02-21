@@ -35,9 +35,8 @@ const Home = () => {
   useEffect(() => {
     // Load saved search input from local storage
     const savedSearchInput = localStorage.getItem("searchInput");
-    if (savedSearchInput) {
-      setSearchInput(savedSearchInput);
-    }
+
+    if (savedSearchInput) setSearchInput(savedSearchInput);
   }, []);
 
   useEffect(() => {
@@ -60,12 +59,28 @@ const Home = () => {
           setFullTimeOnly={setFullTimeOnly}
         />
       </div>
-
-      <div className="jobs-container">
-        {filteredItems.map((job) => (
-          <JobCard key={job.id} job={job} />
-        ))}
-      </div>
+      {filteredItems.length > 0 ? (
+        <div className="jobs-container">
+          {filteredItems.map((job) => (
+            <JobCard key={job.id} job={job} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          <p
+            style={{
+              color: "var(--light-text-color)",
+              fontFamily: "Kumbh Sans",
+              marginTop: "100px",
+            }}
+          >
+            No
+            {searchInput === ""
+              ? ` Full Time positions in ${selectedLocation} currently`
+              : ` results for "${searchInput}"`}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
