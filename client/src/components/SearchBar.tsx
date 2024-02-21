@@ -37,14 +37,14 @@ const SearchBar: React.FC<SearchProps> = ({
 
   const handleLocationChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setSelectedLocation(e.target.value);
-    localStorage.setItem("selectedLocation", e.target.value);
+    sessionStorage.setItem("selectedLocation", e.target.value);
   };
 
   const handleFullTimeChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFullTimeOnly(e.target.checked);
     const fullTime = String(e.target.checked);
 
-    localStorage.setItem("fullTime", fullTime);
+    sessionStorage.setItem("fullTime", fullTime);
   };
 
   const handleLocationFilter = useCallback(() => {
@@ -60,8 +60,8 @@ const SearchBar: React.FC<SearchProps> = ({
 
   useEffect(() => {
     // Load saved selected location from local storage
-    const savedSelectedLocation = localStorage.getItem("selectedLocation");
-    const savedFullTime = localStorage.getItem("fullTime");
+    const savedSelectedLocation = sessionStorage.getItem("selectedLocation");
+    const savedFullTime = sessionStorage.getItem("fullTime");
     const fullTime = Boolean(savedFullTime);
 
     if (savedSelectedLocation) setSelectedLocation(savedSelectedLocation);

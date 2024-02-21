@@ -34,14 +34,14 @@ const Home = () => {
 
   useEffect(() => {
     // Load saved search input from local storage
-    const savedSearchInput = localStorage.getItem("searchInput");
+    const savedSearchInput = sessionStorage.getItem("searchInput");
 
     if (savedSearchInput) setSearchInput(savedSearchInput);
   }, []);
 
   useEffect(() => {
     // Save search input to local storage
-    localStorage.setItem("searchInput", searchInput);
+    sessionStorage.setItem("searchInput", searchInput);
   }, [searchInput]);
 
   return (
